@@ -50,22 +50,22 @@ function insert(req, res, next) {
 	connection.end();
 };
 
-// function listar(req, res, next) {
-// 	res.setHeader('Access-Control-Allow-Origin', '*');
-// 	res.setHeader('content-type','application/json');
-// 	res.charSet('UTF-8');
-// 	let connection = mysql.createConnection(connectionUri);
-// 	let strQuery = 'SELECT * FROM aluno;';
-// 	console.log(strQuery);
-// 	connection.query(strQuery, function(err, rows, fields) {
-// 		if (!err) {
-// 			res.json(rows);
-// 		} else {
-// 			res.json(err);
-// 		}
-// 	});
-// 	connection.end();
-// };
+function list(req, res, next) {
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('content-type','application/json');
+	res.charSet('UTF-8');
+	let connection = mysql.createConnection(connectionUri);
+	let strQuery = 'SELECT * FROM encomenda;';
+	console.log(strQuery);
+	connection.query(strQuery, function(err, rows, fields) {
+		if (!err) {
+			res.json(rows);
+		} else {
+			res.json(err);
+		}
+	});
+	connection.end();
+};
 
 // function atualizar(req, res, next) {
 // 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -119,7 +119,7 @@ function insert(req, res, next) {
 const prefix = '/encomenda';
 
 server.post(prefix + '/insert', insert);
-// server.get(prefix + '/listar', listar);
+server.get(prefix + '/list', list);
 // server.put(prefix + '/atualizar', atualizar);
 // server.del(prefix + '/excluir', excluir);
 
