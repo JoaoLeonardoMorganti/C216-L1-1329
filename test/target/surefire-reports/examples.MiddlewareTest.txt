@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: examples.MiddlewareTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.028 s <<< FAILURE! - in examples.MiddlewareTest
+testParallel  Time elapsed: 2.021 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+status code was: 404, expected: 200, response time in milliseconds: 2, url: http://localhost:5001/encomenda/search/?id=14, response: 
+{"code":"ResourceNotFound","message":"/encomenda/search/ does not exist"}
+src/test/java/middleware/encomenda/encomenda.feature:95 ==> expected: <0> but was: <1>
+	at examples.MiddlewareTest.testParallel(MiddlewareTest.java:16)
+
