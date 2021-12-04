@@ -54,6 +54,7 @@ function list(req, res, next) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader('content-type','application/json');
 	res.charSet('UTF-8');
+
 	let connection = mysql.createConnection(connectionUri);
 	let strQuery = 'SELECT * FROM encomenda;';
 	console.log(strQuery);
@@ -99,31 +100,50 @@ function update(req, res, next) {
 	connection.end();
 };
 
-// function excluir(req, res, next) {
-// 	res.setHeader('Access-Control-Allow-Origin', '*');
-// 	res.setHeader('content-type','application/json');
-// 	res.charSet('UTF-8');
+function exclude(req, res, next) {
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('content-type','application/json');
+	res.charSet('UTF-8');
 
-// 	let connection = mysql.createConnection(connectionUri);
-// 	let strQuery = `DELETE FROM aluno WHERE id = '${req.body.id}';`
+	let connection = mysql.createConnection(connectionUri);
+	let strQuery = `DELETE FROM encomenda WHERE id = '${req.body.id}';`
 	
-// 	console.log(strQuery);
-// 	connection.query(strQuery, function(err, rows, fields) {
-// 		if (!err) {
-// 			res.json(rows);
-// 		} else {
-// 			res.json(err);
-// 		}
-// 	});
-// 	connection.end();
-// };
+	console.log(strQuery);
+	connection.query(strQuery, function(err, rows, fields) {
+		if (!err) {
+			res.json(rows);
+		} else {
+			res.json(err);
+		}
+	});
+	connection.end();
+};
+
+function search(req, res, next) {
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('content-type','application/json');
+	res.charSet('UTF-8');
+	
+	let connection = mysql.createConnection(connectionUri);
+	let strQuery = `SELECT * FROM encomenda WHERE id = ${req.query.id};`
+	console.log(strQuery);
+	connection.query(strQuery, function(err, rows, fields) {
+		if (!err) {
+			res.json(rows);
+		} else {
+			res.json(err);
+		}
+	});
+	connection.end();
+};
 
 const prefix = '/encomenda';
 
 server.post(prefix + '/insert', insert);
 server.get(prefix + '/list', list);
 server.put(prefix + '/update', update);
-// server.del(prefix + '/excluir', excluir);
+server.del(prefix + '/exclude', exclude);
+server.get(prefix + '/search', search);
 
 const port = process.env.PORT || 5001;
 
