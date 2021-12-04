@@ -67,35 +67,37 @@ function list(req, res, next) {
 	connection.end();
 };
 
-// function atualizar(req, res, next) {
-// 	res.setHeader('Access-Control-Allow-Origin', '*');
-// 	res.setHeader('content-type','application/json');
-// 	res.charSet('UTF-8');
+function update(req, res, next) {
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('content-type','application/json');
+	res.charSet('UTF-8');
 
-// 	let aluno = {
-// 		id : req.body.id,
-// 		nome : req.body.nome,
-// 		curso : req.body.curso,
-// 		nascimento : req.body.nascimento
-// 	};
+	let encomenda = {
+		id : req.body.id,
+		origem : req.body.origem,
+		destino : req.body.destino,
+		peso : req.body.peso,
+		data : req.body.data
+	};
 
-// 	let connection = mysql.createConnection(connectionUri);
-// 	let strQuery = `UPDATE aluno SET ` + 
-// 	                `nome = '${aluno.nome}', ` +
-// 					`curso = '${aluno.curso}', ` +
-// 					`nascimento = '${aluno.nascimento}' ` +
-// 					`WHERE id = '${aluno.id}';`
+	let connection = mysql.createConnection(connectionUri);
+	let strQuery = `UPDATE encomenda SET ` + 
+	                `origem = '${encomenda.origem}', ` +
+					`destino = '${encomenda.destino}', ` +
+					`peso = '${encomenda.peso}', ` +
+					`data = '${encomenda.data}' ` +
+					`WHERE id = '${encomenda.id}';`
 	
-// 	console.log(strQuery);
-// 	connection.query(strQuery, function(err, rows, fields) {
-// 		if (!err) {
-// 			res.json(rows);
-// 		} else {
-// 			res.json(err);
-// 		}
-// 	});
-// 	connection.end();
-// };
+	console.log(strQuery);
+	connection.query(strQuery, function(err, rows, fields) {
+		if (!err) {
+			res.json(rows);
+		} else {
+			res.json(err);
+		}
+	});
+	connection.end();
+};
 
 // function excluir(req, res, next) {
 // 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -120,7 +122,7 @@ const prefix = '/encomenda';
 
 server.post(prefix + '/insert', insert);
 server.get(prefix + '/list', list);
-// server.put(prefix + '/atualizar', atualizar);
+server.put(prefix + '/update', update);
 // server.del(prefix + '/excluir', excluir);
 
 const port = process.env.PORT || 5001;
