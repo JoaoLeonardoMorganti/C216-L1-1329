@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="examples.MiddlewareTest" time="2.028" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="examples.MiddlewareTest" time="2.072" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/17.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/joaoleonardo/Desktop/C216-L1-1329/test/target/surefire/surefirebooter13576584715542603764.jar /Users/joaoleonardo/Desktop/C216-L1-1329/test/target/surefire 2021-12-04T13-22-47_800-jvmRun1 surefire3079869405357628883tmp surefire_08245427629722745261tmp"/>
+    <property name="sun.java.command" value="/Users/joaoleonardo/Desktop/C216-L1-1329/test/target/surefire/surefirebooter12915956013809388253.jar /Users/joaoleonardo/Desktop/C216-L1-1329/test/target/surefire 2021-12-04T14-49-15_628-jvmRun1 surefire265850177093319841tmp surefire_012275636023541144331tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="MiddlewareTest"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="karate.options" value="/Users/joaoleonardo/Desktop/C216-L1-1329/test/src/test/java/middleware/encomenda/encomenda.feature"/>
-    <property name="surefire.real.class.path" value="/Users/joaoleonardo/Desktop/C216-L1-1329/test/target/surefire/surefirebooter13576584715542603764.jar"/>
+    <property name="surefire.real.class.path" value="/Users/joaoleonardo/Desktop/C216-L1-1329/test/target/surefire/surefirebooter12915956013809388253.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="17.0.1+0"/>
@@ -57,177 +57,5 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testParallel" classname="examples.MiddlewareTest" time="2.021">
-    <failure message="status code was: 404, expected: 200, response time in milliseconds: 2, url: http://localhost:5001/encomenda/search/?id=14, response: &#10;{&quot;code&quot;:&quot;ResourceNotFound&quot;,&quot;message&quot;:&quot;/encomenda/search/ does not exist&quot;}&#10;src/test/java/middleware/encomenda/encomenda.feature:95 ==&gt; expected: &lt;0&gt; but was: &lt;1&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
-status code was: 404, expected: 200, response time in milliseconds: 2, url: http://localhost:5001/encomenda/search/?id=14, response: 
-{"code":"ResourceNotFound","message":"/encomenda/search/ does not exist"}
-src/test/java/middleware/encomenda/encomenda.feature:95 ==> expected: <0> but was: <1>
-	at examples.MiddlewareTest.testParallel(MiddlewareTest.java:16)
-]]></failure>
-    <system-out><![CDATA[13:22:48.398 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': /Users/joaoleonardo/Desktop/C216-L1-1329/test/src/test/java/middleware/encomenda/encomenda.feature
-13:22:48.729 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-13:22:49.307 [main] INFO  com.intuit.karate - karate.env system property was: null 
-13:22:49.557 [main] DEBUG com.intuit.karate - request:
-1 > POST http://localhost:5001/encomenda/insert
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 77
-1 > Host: localhost:5001
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
-1 > Accept-Encoding: gzip,deflate
-{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","destino":"cidade2"}
-
-13:22:49.590 [main] DEBUG com.intuit.karate - response time in milliseconds: 31
-1 < 200
-1 < Server: Teste PrÃ¡tico
-1 < Access-Control-Allow-Origin: *
-1 < Content-Type: application/json; charset=UTF-8
-1 < Content-Length: 128
-1 < Date: Sat, 04 Dec 2021 16:22:49 GMT
-1 < Connection: keep-alive
-1 < Keep-Alive: timeout=5
-{"fieldCount":0,"serverStatus":2,"protocol41":true,"changedRows":0,"affectedRows":1,"warningCount":0,"message":"","insertId":24}
-13:22:49.608 [main] INFO  com.intuit.karate - karate.env system property was: null 
-13:22:49.612 [main] DEBUG com.intuit.karate - request:
-1 > GET http://localhost:5001/encomenda/list
-1 > Host: localhost:5001
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
-1 > Accept-Encoding: gzip,deflate
-
-
-13:22:49.618 [main] DEBUG com.intuit.karate - response time in milliseconds: 6
-1 < 200
-1 < Server: Teste PrÃ¡tico
-1 < Access-Control-Allow-Origin: *
-1 < Content-Type: application/json; charset=UTF-8
-1 < Content-Length: 1009
-1 < Date: Sat, 04 Dec 2021 16:22:49 GMT
-1 < Connection: keep-alive
-1 < Keep-Alive: timeout=5
-[{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":13,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":14,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":15,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":16,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":17,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":18,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":19,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":20,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":21,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":22,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":23,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":24,"destino":"cidade2"}]
-13:22:49.632 [main] INFO  com.intuit.karate - karate.env system property was: null 
-13:22:49.634 [main] DEBUG com.intuit.karate - request:
-1 > GET http://localhost:5001/encomenda/list
-1 > Host: localhost:5001
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
-1 > Accept-Encoding: gzip,deflate
-
-
-13:22:49.637 [main] DEBUG com.intuit.karate - response time in milliseconds: 3
-1 < 200
-1 < Server: Teste PrÃ¡tico
-1 < Access-Control-Allow-Origin: *
-1 < Content-Type: application/json; charset=UTF-8
-1 < Content-Length: 1009
-1 < Date: Sat, 04 Dec 2021 16:22:49 GMT
-1 < Connection: keep-alive
-1 < Keep-Alive: timeout=5
-[{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":13,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":14,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":15,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":16,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":17,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":18,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":19,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":20,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":21,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":22,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":23,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":24,"destino":"cidade2"}]
-13:22:49.648 [main] DEBUG com.intuit.karate - request:
-2 > DELETE http://localhost:5001/encomenda/exclude
-2 > Content-Type: application/json; charset=UTF-8
-2 > Content-Length: 9
-2 > Host: localhost:5001
-2 > Connection: Keep-Alive
-2 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
-2 > Accept-Encoding: gzip,deflate
-{"id":13}
-
-13:22:49.652 [main] DEBUG com.intuit.karate - response time in milliseconds: 3
-2 < 200
-2 < Server: Teste PrÃ¡tico
-2 < Access-Control-Allow-Origin: *
-2 < Content-Type: application/json; charset=UTF-8
-2 < Content-Length: 127
-2 < Date: Sat, 04 Dec 2021 16:22:49 GMT
-2 < Connection: keep-alive
-2 < Keep-Alive: timeout=5
-{"fieldCount":0,"serverStatus":2,"protocol41":true,"changedRows":0,"affectedRows":1,"warningCount":0,"message":"","insertId":0}
-13:22:49.655 [main] DEBUG com.intuit.karate - request:
-3 > DELETE http://localhost:5001/encomenda/exclude
-3 > Content-Type: application/json; charset=UTF-8
-3 > Content-Length: 9
-3 > Host: localhost:5001
-3 > Connection: Keep-Alive
-3 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
-3 > Accept-Encoding: gzip,deflate
-{"id":13}
-
-13:22:49.661 [main] DEBUG com.intuit.karate - response time in milliseconds: 6
-3 < 200
-3 < Server: Teste PrÃ¡tico
-3 < Access-Control-Allow-Origin: *
-3 < Content-Type: application/json; charset=UTF-8
-3 < Content-Length: 127
-3 < Date: Sat, 04 Dec 2021 16:22:49 GMT
-3 < Connection: keep-alive
-3 < Keep-Alive: timeout=5
-{"fieldCount":0,"serverStatus":2,"protocol41":true,"changedRows":0,"affectedRows":0,"warningCount":0,"message":"","insertId":0}
-13:22:49.669 [main] INFO  com.intuit.karate - karate.env system property was: null 
-13:22:49.671 [main] DEBUG com.intuit.karate - request:
-1 > GET http://localhost:5001/encomenda/list
-1 > Host: localhost:5001
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
-1 > Accept-Encoding: gzip,deflate
-
-
-13:22:49.674 [main] DEBUG com.intuit.karate - response time in milliseconds: 3
-1 < 200
-1 < Server: Teste PrÃ¡tico
-1 < Access-Control-Allow-Origin: *
-1 < Content-Type: application/json; charset=UTF-8
-1 < Content-Length: 925
-1 < Date: Sat, 04 Dec 2021 16:22:49 GMT
-1 < Connection: keep-alive
-1 < Keep-Alive: timeout=5
-[{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":14,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":15,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":16,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":17,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":18,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":19,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":20,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":21,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":22,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":23,"destino":"cidade2"},{"data":"dd\/mm\/aaaa","peso":"xxx g","origem":"cidade1","id":24,"destino":"cidade2"}]
-13:22:49.687 [main] DEBUG com.intuit.karate - request:
-2 > GET http://localhost:5001/encomenda/search/?id=14
-2 > Host: localhost:5001
-2 > Connection: Keep-Alive
-2 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
-2 > Accept-Encoding: gzip,deflate
-
-
-13:22:49.689 [main] DEBUG com.intuit.karate - response time in milliseconds: 2
-2 < 404
-2 < Server: Teste PrÃ¡tico
-2 < Content-Type: application/json
-2 < Content-Length: 73
-2 < Date: Sat, 04 Dec 2021 16:22:49 GMT
-2 < Connection: keep-alive
-2 < Keep-Alive: timeout=5
-{"code":"ResourceNotFound","message":"\/encomenda\/search\/ does not exist"}
-13:22:49.691 [main] ERROR com.intuit.karate - src/test/java/middleware/encomenda/encomenda.feature:95
-Then status 200
-status code was: 404, expected: 200, response time in milliseconds: 2, url: http://localhost:5001/encomenda/search/?id=14, response: 
-{"code":"ResourceNotFound","message":"/encomenda/search/ does not exist"}
-src/test/java/middleware/encomenda/encomenda.feature:95
----------------------------------------------------------
-feature: src/test/java/middleware/encomenda/encomenda.feature
-scenarios:  4 | passed:  3 | failed:  1 | time: 0,3323
----------------------------------------------------------
-
-13:22:50.187 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/middleware/encomenda/encomenda.feature
-Karate version: 1.0.1
-======================================================
-elapsed:   1,79 | threads:    1 | thread time: 0,33 
-features:     1 | skipped:    0 | efficiency: 0,19
-scenarios:    4 | passed:     3 | failed: 1
-======================================================
->>> failed features:
-status code was: 404, expected: 200, response time in milliseconds: 2, url: http://localhost:5001/encomenda/search/?id=14, response: 
-{"code":"ResourceNotFound","message":"/encomenda/search/ does not exist"}
-src/test/java/middleware/encomenda/encomenda.feature:95
-<<<
-
-HTML report: (paste into browser to view) | Karate version: 1.0.1
-file:///Users/joaoleonardo/Desktop/C216-L1-1329/test/target/karate-reports/karate-summary.html
-===================================================================
-
-]]></system-out>
-  </testcase>
+  <testcase name="testParallel" classname="examples.MiddlewareTest" time="2.065"/>
 </testsuite>

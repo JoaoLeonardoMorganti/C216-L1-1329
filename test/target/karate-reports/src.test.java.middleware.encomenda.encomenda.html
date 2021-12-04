@@ -22,15 +22,15 @@
       <img src="karate-logo.svg" alt="Karate"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">3</div>
-      <div id="nav-fail" class="bg-danger">1</div>
+      <div id="nav-pass" class="bg-success">5</div>
+      <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
   <div id="nav-type">
     <div>Scenarios</div>
   </div>         
   <div id="nav-date">
-    <div>2021-12-04 01:22:49 PM</div>
+    <div>2021-12-04 02:49:17 PM</div>
   </div>        
 </div>
 
@@ -42,10 +42,13 @@
             <a href="#[2:23]"><span>[2:23]</span> <span>Listas todas as encomendas</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[3:62]"><span>[3:62]</span> <span>Eclusão de encomenda a partir de seu ID</span></a>
+            <a href="#[3:29]"><span>[3:29]</span> <span>Atualizar uma encomenda através de seu ID [primeira encomenda da tabela]</span></a>
           </div>
-          <div class="nav-item failed">
-            <a href="#[4:86]"><span>[4:86]</span> <span>Procura de encomenda a partir de seu ID</span></a>
+          <div class="nav-item passed">
+            <a href="#[4:63]"><span>[4:63]</span> <span>Eclusão de encomenda a partir de seu ID</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[5:87]"><span>[5:87]</span> <span>Procura de encomenda a partir de seu ID</span></a>
           </div>
         </div>
       </div>
@@ -71,7 +74,7 @@
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>269</span>
+              <span>ms:</span>&nbsp;<span>270</span>
             </div>
           </div>
           <div class="step-row">
@@ -103,7 +106,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.4">13:22:49.308 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">14:49:17.125 karate.env system property was: null 
 </div>   
 
   
@@ -123,7 +126,7 @@
         <span>*</span>&nbsp;<span>def encomenda =</span>
       </div>
     </div>
-    <div class="time-cell passed">23</div>
+    <div class="time-cell passed">24</div>
   </div>
 
    
@@ -221,7 +224,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.19">13:22:49.557 request:
+  <div class="preformatted" data-parent="0.19">14:49:17.366 request:
 1 &gt; POST http://localhost:5001/encomenda/insert
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 77
@@ -231,16 +234,16 @@
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;destino&quot;:&quot;cidade2&quot;}
 
-13:22:49.590 response time in milliseconds: 31
+14:49:17.405 response time in milliseconds: 37
 1 &lt; 200
 1 &lt; Server: Teste PrÃ¡tico
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Content-Type: application/json; charset=UTF-8
 1 &lt; Content-Length: 128
-1 &lt; Date: Sat, 04 Dec 2021 16:22:49 GMT
+1 &lt; Date: Sat, 04 Dec 2021 17:49:17 GMT
 1 &lt; Connection: keep-alive
 1 &lt; Keep-Alive: timeout=5
-{&quot;fieldCount&quot;:0,&quot;serverStatus&quot;:2,&quot;protocol41&quot;:true,&quot;changedRows&quot;:0,&quot;affectedRows&quot;:1,&quot;warningCount&quot;:0,&quot;message&quot;:&quot;&quot;,&quot;insertId&quot;:24}
+{&quot;fieldCount&quot;:0,&quot;serverStatus&quot;:2,&quot;protocol41&quot;:true,&quot;changedRows&quot;:0,&quot;affectedRows&quot;:1,&quot;warningCount&quot;:0,&quot;message&quot;:&quot;&quot;,&quot;insertId&quot;:41}
 </div>   
 
   
@@ -288,7 +291,7 @@
         <span>And</span>&nbsp;<span>match $.affectedRows == 1</span>
       </div>
     </div>
-    <div class="time-cell passed">8</div>
+    <div class="time-cell passed">10</div>
   </div>
 
    
@@ -317,7 +320,7 @@
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>15</span>
+              <span>ms:</span>&nbsp;<span>18</span>
             </div>
           </div>
           <div class="step-row">
@@ -349,7 +352,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.4">13:22:49.608 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">14:49:17.427 karate.env system property was: null 
 </div>   
 
   
@@ -397,7 +400,7 @@
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">9</div>
+    <div class="time-cell passed">10</div>
   </div>
 
    
@@ -406,7 +409,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.25">13:22:49.612 request:
+  <div class="preformatted" data-parent="0.25">14:49:17.430 request:
 1 &gt; GET http://localhost:5001/encomenda/list
 1 &gt; Host: localhost:5001
 1 &gt; Connection: Keep-Alive
@@ -414,16 +417,16 @@
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-13:22:49.619 response time in milliseconds: 6
+14:49:17.437 response time in milliseconds: 6
 1 &lt; 200
 1 &lt; Server: Teste PrÃ¡tico
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Content-Type: application/json; charset=UTF-8
-1 &lt; Content-Length: 1009
-1 &lt; Date: Sat, 04 Dec 2021 16:22:49 GMT
+1 &lt; Content-Length: 1345
+1 &lt; Date: Sat, 04 Dec 2021 17:49:17 GMT
 1 &lt; Connection: keep-alive
 1 &lt; Keep-Alive: timeout=5
-[{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:13,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:14,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:15,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:16,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:17,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:18,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:19,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:20,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:21,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:22,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:23,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:24,&quot;destino&quot;:&quot;cidade2&quot;}]
+[{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:26,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:27,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:28,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:29,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:30,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:31,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:32,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:33,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:34,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:35,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:36,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:37,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:38,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:39,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:40,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:41,&quot;destino&quot;:&quot;cidade2&quot;}]
 </div>   
 
   
@@ -471,7 +474,7 @@
         <span>And</span>&nbsp;<span>match each $ contains { id : &#39;#number&#39;, origem : &#39;#string&#39;, destino : &#39;#string&#39;, peso : &#39;#string&#39;, data : &#39;#string&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">5</div>
+    <div class="time-cell passed">8</div>
   </div>
 
    
@@ -488,29 +491,29 @@
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[3:62]">
+          <div class="scenario-heading" id="[3:29]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[3:62]</span>
-                <span class="scenario-name">Eclusão de encomenda a partir de seu ID</span>
+                Scenario: <span>[3:29]</span>
+                <span class="scenario-name">Atualizar uma encomenda através de seu ID [primeira encomenda da tabela]</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>29</span>
+              <span>ms:</span>&nbsp;<span>42</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[3:62]bg">
+            <div class="step-container" id="[3:29]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[3:62]bg"><div>
+          <div data-parent="[3:29]bg"><div>
   
 
   
@@ -532,7 +535,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.4">13:22:49.632 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">14:49:17.454 karate.env system property was: null 
 </div>   
 
   
@@ -545,8 +548,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.64">
-      <div class="step-ref passed">64</div>
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path &#39;list&#39;</span>
@@ -573,14 +576,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.65">
-      <div class="step-ref passed">65</div>
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">5</div>
+    <div class="time-cell passed">10</div>
   </div>
 
    
@@ -589,7 +592,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.65">13:22:49.634 request:
+  <div class="preformatted" data-parent="0.32">14:49:17.456 request:
 1 &gt; GET http://localhost:5001/encomenda/list
 1 &gt; Host: localhost:5001
 1 &gt; Connection: Keep-Alive
@@ -597,16 +600,16 @@
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-13:22:49.638 response time in milliseconds: 3
+14:49:17.464 response time in milliseconds: 8
 1 &lt; 200
 1 &lt; Server: Teste PrÃ¡tico
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Content-Type: application/json; charset=UTF-8
-1 &lt; Content-Length: 1009
-1 &lt; Date: Sat, 04 Dec 2021 16:22:49 GMT
+1 &lt; Content-Length: 1345
+1 &lt; Date: Sat, 04 Dec 2021 17:49:17 GMT
 1 &lt; Connection: keep-alive
 1 &lt; Keep-Alive: timeout=5
-[{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:13,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:14,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:15,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:16,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:17,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:18,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:19,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:20,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:21,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:22,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:23,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:24,&quot;destino&quot;:&quot;cidade2&quot;}]
+[{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:26,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:27,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:28,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:29,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:30,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:31,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:32,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:33,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:34,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:35,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:36,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:37,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:38,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:39,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:40,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:41,&quot;destino&quot;:&quot;cidade2&quot;}]
 </div>   
 
   
@@ -619,8 +622,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.66">
-      <div class="step-ref passed">66</div>
+    <div class="step-container" id="0.33">
+      <div class="step-ref passed">33</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -647,20 +650,52 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.67">
-      <div class="step-ref passed">67</div>
+    <div class="step-container" id="0.34">
+      <div class="step-ref passed">34</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def encomenda =</span>
+        <span>*</span>&nbsp;<span>def encomendaOriginal = response[0]</span>
       </div>
     </div>
-    <div class="time-cell passed">8</div>
+    <div class="time-cell passed">7</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="0.67">{
-  &quot;id&quot;: &#39;#(response[0].id)&#39;
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def encomendaModificado =</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.36">{   
+    &quot;id&quot;: &#39;#(encomendaOriginal.id)&#39;,
+    &quot;origem&quot;: &quot;cidade1_atualizado&quot;,
+    &quot;destino&quot;: &quot;cidade2_atualizado&quot;,
+    &quot;peso&quot;: &quot;xxx g_atualizado&quot;,
+    &quot;data&quot;: &quot;dd/mm/aaaa_atualizado&quot;
 }</div>
 
   
@@ -677,11 +712,39 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.74">
-      <div class="step-ref passed">74</div>
+    <div class="step-container" id="0.47">
+      <div class="step-ref passed">47</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;exclude&#39;</span>
+        <span>Given</span>&nbsp;<span>path &#39;update&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request encomendaModificado</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -705,11 +768,570 @@
   
 
   <div class="step-row">
+    <div class="step-container" id="0.49">
+      <div class="step-ref passed">49</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method put</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.49">14:49:17.479 request:
+2 &gt; PUT http://localhost:5001/encomenda/update
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Content-Length: 129
+2 &gt; Host: localhost:5001
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:&quot;dd\/mm\/aaaa_atualizado&quot;,&quot;peso&quot;:&quot;xxx g_atualizado&quot;,&quot;origem&quot;:&quot;cidade1_atualizado&quot;,&quot;id&quot;:26,&quot;destino&quot;:&quot;cidade2_atualizado&quot;}
+
+14:49:17.484 response time in milliseconds: 5
+2 &lt; 200
+2 &lt; Server: Teste PrÃ¡tico
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Content-Type: application/json; charset=UTF-8
+2 &lt; Content-Length: 168
+2 &lt; Date: Sat, 04 Dec 2021 17:49:17 GMT
+2 &lt; Connection: keep-alive
+2 &lt; Keep-Alive: timeout=5
+{&quot;fieldCount&quot;:0,&quot;serverStatus&quot;:2,&quot;protocol41&quot;:true,&quot;changedRows&quot;:1,&quot;affectedRows&quot;:1,&quot;warningCount&quot;:0,&quot;message&quot;:&quot;(Rows matched: 1  Changed: 1  Warnings: 0&quot;,&quot;insertId&quot;:0}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.51">
+      <div class="step-ref passed">51</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.affectedRows == 1</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;list&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.54">
+      <div class="step-ref passed">54</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.54">14:49:17.487 request:
+3 &gt; GET http://localhost:5001/encomenda/list
+3 &gt; Host: localhost:5001
+3 &gt; Connection: Keep-Alive
+3 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+3 &gt; Accept-Encoding: gzip,deflate
+
+
+14:49:17.493 response time in milliseconds: 6
+3 &lt; 200
+3 &lt; Server: Teste PrÃ¡tico
+3 &lt; Access-Control-Allow-Origin: *
+3 &lt; Content-Type: application/json; charset=UTF-8
+3 &lt; Content-Length: 1389
+3 &lt; Date: Sat, 04 Dec 2021 17:49:17 GMT
+3 &lt; Connection: keep-alive
+3 &lt; Keep-Alive: timeout=5
+[{&quot;data&quot;:&quot;dd\/mm\/aaaa_atualizado&quot;,&quot;peso&quot;:&quot;xxx g_atualizado&quot;,&quot;origem&quot;:&quot;cidade1_atualizado&quot;,&quot;id&quot;:26,&quot;destino&quot;:&quot;cidade2_atualizado&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:27,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:28,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:29,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:30,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:31,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:32,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:33,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:34,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:35,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:36,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:37,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:38,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:39,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:40,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:41,&quot;destino&quot;:&quot;cidade2&quot;}]
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.55">
+      <div class="step-ref passed">55</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.56">
+      <div class="step-ref passed">56</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def encomendaDepois = response[0]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match encomendaDepois.id == encomendaOriginal.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.58">
+      <div class="step-ref passed">58</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match encomendaDepois.origem == encomendaModificado.origem</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.59">
+      <div class="step-ref passed">59</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match encomendaDepois.destino == encomendaModificado.destino</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.60">
+      <div class="step-ref passed">60</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match encomendaDepois.peso == encomendaModificado.peso</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.61">
+      <div class="step-ref passed">61</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match encomendaDepois.data == encomendaModificado.data</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:63]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:63]</span>
+                <span class="scenario-name">Eclusão de encomenda a partir de seu ID</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>23</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:63]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:63]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;http://localhost:5001/encomenda&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">14:49:17.509 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.65">
+      <div class="step-ref passed">65</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;list&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.66">
+      <div class="step-ref passed">66</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.66">14:49:17.511 request:
+1 &gt; GET http://localhost:5001/encomenda/list
+1 &gt; Host: localhost:5001
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+14:49:17.517 response time in milliseconds: 5
+1 &lt; 200
+1 &lt; Server: Teste PrÃ¡tico
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Type: application/json; charset=UTF-8
+1 &lt; Content-Length: 1389
+1 &lt; Date: Sat, 04 Dec 2021 17:49:17 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+[{&quot;data&quot;:&quot;dd\/mm\/aaaa_atualizado&quot;,&quot;peso&quot;:&quot;xxx g_atualizado&quot;,&quot;origem&quot;:&quot;cidade1_atualizado&quot;,&quot;id&quot;:26,&quot;destino&quot;:&quot;cidade2_atualizado&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:27,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:28,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:29,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:30,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:31,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:32,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:33,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:34,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:35,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:36,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:37,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:38,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:39,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:40,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:41,&quot;destino&quot;:&quot;cidade2&quot;}]
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.67">
+      <div class="step-ref passed">67</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.68">
+      <div class="step-ref passed">68</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def encomenda =</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.68">{
+  &quot;id&quot;: &#39;#(response[0].id)&#39;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
     <div class="step-container" id="0.75">
       <div class="step-ref passed">75</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request encomenda</span>
+        <span>Given</span>&nbsp;<span>path &#39;exclude&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -737,10 +1359,10 @@
       <div class="step-ref passed">76</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method delete</span>
+        <span>And</span>&nbsp;<span>request encomenda</span>
       </div>
     </div>
-    <div class="time-cell passed">5</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -749,7 +1371,35 @@
 
   
 
-  <div class="preformatted" data-parent="0.76">13:22:49.649 request:
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method delete</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.77">14:49:17.521 request:
 2 &gt; DELETE http://localhost:5001/encomenda/exclude
 2 &gt; Content-Type: application/json; charset=UTF-8
 2 &gt; Content-Length: 9
@@ -757,15 +1407,15 @@
 2 &gt; Connection: Keep-Alive
 2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
 2 &gt; Accept-Encoding: gzip,deflate
-{&quot;id&quot;:13}
+{&quot;id&quot;:26}
 
-13:22:49.652 response time in milliseconds: 3
+14:49:17.527 response time in milliseconds: 5
 2 &lt; 200
 2 &lt; Server: Teste PrÃ¡tico
 2 &lt; Access-Control-Allow-Origin: *
 2 &lt; Content-Type: application/json; charset=UTF-8
 2 &lt; Content-Length: 127
-2 &lt; Date: Sat, 04 Dec 2021 16:22:49 GMT
+2 &lt; Date: Sat, 04 Dec 2021 17:49:17 GMT
 2 &lt; Connection: keep-alive
 2 &lt; Keep-Alive: timeout=5
 {&quot;fieldCount&quot;:0,&quot;serverStatus&quot;:2,&quot;protocol41&quot;:true,&quot;changedRows&quot;:0,&quot;affectedRows&quot;:1,&quot;warningCount&quot;:0,&quot;message&quot;:&quot;&quot;,&quot;insertId&quot;:0}
@@ -781,8 +1431,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.77">
-      <div class="step-ref passed">77</div>
+    <div class="step-container" id="0.78">
+      <div class="step-ref passed">78</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -809,39 +1459,11 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.78">
-      <div class="step-ref passed">78</div>
+    <div class="step-container" id="0.79">
+      <div class="step-ref passed">79</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.affectedRows == 1</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.80">
-      <div class="step-ref passed">80</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;exclude&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -869,7 +1491,7 @@
       <div class="step-ref passed">81</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request encomenda</span>
+        <span>Given</span>&nbsp;<span>path &#39;exclude&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -897,10 +1519,10 @@
       <div class="step-ref passed">82</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method delete</span>
+        <span>And</span>&nbsp;<span>request encomenda</span>
       </div>
     </div>
-    <div class="time-cell passed">8</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -909,7 +1531,35 @@
 
   
 
-  <div class="preformatted" data-parent="0.82">13:22:49.655 request:
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.83">
+      <div class="step-ref passed">83</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method delete</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.83">14:49:17.529 request:
 3 &gt; DELETE http://localhost:5001/encomenda/exclude
 3 &gt; Content-Type: application/json; charset=UTF-8
 3 &gt; Content-Length: 9
@@ -917,15 +1567,15 @@
 3 &gt; Connection: Keep-Alive
 3 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
 3 &gt; Accept-Encoding: gzip,deflate
-{&quot;id&quot;:13}
+{&quot;id&quot;:26}
 
-13:22:49.661 response time in milliseconds: 6
+14:49:17.532 response time in milliseconds: 3
 3 &lt; 200
 3 &lt; Server: Teste PrÃ¡tico
 3 &lt; Access-Control-Allow-Origin: *
 3 &lt; Content-Type: application/json; charset=UTF-8
 3 &lt; Content-Length: 127
-3 &lt; Date: Sat, 04 Dec 2021 16:22:49 GMT
+3 &lt; Date: Sat, 04 Dec 2021 17:49:17 GMT
 3 &lt; Connection: keep-alive
 3 &lt; Keep-Alive: timeout=5
 {&quot;fieldCount&quot;:0,&quot;serverStatus&quot;:2,&quot;protocol41&quot;:true,&quot;changedRows&quot;:0,&quot;affectedRows&quot;:0,&quot;warningCount&quot;:0,&quot;message&quot;:&quot;&quot;,&quot;insertId&quot;:0}
@@ -941,8 +1591,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.83">
-      <div class="step-ref passed">83</div>
+    <div class="step-container" id="0.84">
+      <div class="step-ref passed">84</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -969,8 +1619,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.84">
-      <div class="step-ref passed">84</div>
+    <div class="step-container" id="0.85">
+      <div class="step-ref passed">85</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.affectedRows == 0</span>
@@ -993,29 +1643,29 @@
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[4:86]">
+          <div class="scenario-heading" id="[5:87]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[4:86]</span>
+                Scenario: <span>[5:87]</span>
                 <span class="scenario-name">Procura de encomenda a partir de seu ID</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>20</span>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>26</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[4:86]bg">
+            <div class="step-container" id="[5:87]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[4:86]bg"><div>
+          <div data-parent="[5:87]bg"><div>
   
 
   
@@ -1037,7 +1687,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.4">13:22:49.669 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">14:49:17.539 karate.env system property was: null 
 </div>   
 
   
@@ -1050,8 +1700,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.88">
-      <div class="step-ref passed">88</div>
+    <div class="step-container" id="0.89">
+      <div class="step-ref passed">89</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path &#39;list&#39;</span>
@@ -1078,14 +1728,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.89">
-      <div class="step-ref passed">89</div>
+    <div class="step-container" id="0.90">
+      <div class="step-ref passed">90</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">7</div>
+    <div class="time-cell passed">6</div>
   </div>
 
    
@@ -1094,7 +1744,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.89">13:22:49.671 request:
+  <div class="preformatted" data-parent="0.90">14:49:17.542 request:
 1 &gt; GET http://localhost:5001/encomenda/list
 1 &gt; Host: localhost:5001
 1 &gt; Connection: Keep-Alive
@@ -1102,16 +1752,16 @@
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-13:22:49.675 response time in milliseconds: 3
+14:49:17.546 response time in milliseconds: 4
 1 &lt; 200
 1 &lt; Server: Teste PrÃ¡tico
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Content-Type: application/json; charset=UTF-8
-1 &lt; Content-Length: 925
-1 &lt; Date: Sat, 04 Dec 2021 16:22:49 GMT
+1 &lt; Content-Length: 1261
+1 &lt; Date: Sat, 04 Dec 2021 17:49:17 GMT
 1 &lt; Connection: keep-alive
 1 &lt; Keep-Alive: timeout=5
-[{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:14,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:15,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:16,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:17,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:18,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:19,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:20,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:21,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:22,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:23,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:24,&quot;destino&quot;:&quot;cidade2&quot;}]
+[{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:27,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:28,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:29,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:30,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:31,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:32,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:33,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:34,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:35,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:36,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:37,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:38,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:39,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:40,&quot;destino&quot;:&quot;cidade2&quot;},{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:41,&quot;destino&quot;:&quot;cidade2&quot;}]
 </div>   
 
   
@@ -1124,8 +1774,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.90">
-      <div class="step-ref passed">90</div>
+    <div class="step-container" id="0.91">
+      <div class="step-ref passed">91</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -1152,8 +1802,36 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.91">
-      <div class="step-ref passed">91</div>
+    <div class="step-container" id="0.92">
+      <div class="step-ref passed">92</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def primeiraEncomenda = response[0]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.93">
+      <div class="step-ref passed">93</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def encomendaID = response[0].id</span>
@@ -1180,14 +1858,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.93">
-      <div class="step-ref passed">93</div>
+    <div class="step-container" id="0.94">
+      <div class="step-ref passed">94</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;search/?id=&#39; + encomendaID</span>
+        <span>*</span>&nbsp;<span>def parameter = &quot;?id=&quot; + encomendaID</span>
       </div>
     </div>
-    <div class="time-cell passed">8</div>
+    <div class="time-cell passed">6</div>
   </div>
 
    
@@ -1208,14 +1886,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.94">
-      <div class="step-ref passed">94</div>
+    <div class="step-container" id="0.96">
+      <div class="step-ref passed">96</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method get</span>
+        <span>Given</span>&nbsp;<span>path &#39;search&#39; + parameter</span>
       </div>
     </div>
-    <div class="time-cell passed">4</div>
+    <div class="time-cell passed">5</div>
   </div>
 
    
@@ -1224,23 +1902,52 @@
 
   
 
-  <div class="preformatted" data-parent="0.94">13:22:49.687 request:
-2 &gt; GET http://localhost:5001/encomenda/search/?id=14
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.97">
+      <div class="step-ref passed">97</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.97">14:49:17.561 request:
+2 &gt; GET http://localhost:5001/encomenda/search?id=27
 2 &gt; Host: localhost:5001
 2 &gt; Connection: Keep-Alive
 2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
 2 &gt; Accept-Encoding: gzip,deflate
 
 
-13:22:49.689 response time in milliseconds: 2
-2 &lt; 404
+14:49:17.565 response time in milliseconds: 4
+2 &lt; 200
 2 &lt; Server: Teste PrÃ¡tico
-2 &lt; Content-Type: application/json
-2 &lt; Content-Length: 73
-2 &lt; Date: Sat, 04 Dec 2021 16:22:49 GMT
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Content-Type: application/json; charset=UTF-8
+2 &lt; Content-Length: 85
+2 &lt; Date: Sat, 04 Dec 2021 17:49:17 GMT
 2 &lt; Connection: keep-alive
 2 &lt; Keep-Alive: timeout=5
-{&quot;code&quot;:&quot;ResourceNotFound&quot;,&quot;message&quot;:&quot;\/encomenda\/search\/ does not exist&quot;}
+[{&quot;data&quot;:&quot;dd\/mm\/aaaa&quot;,&quot;peso&quot;:&quot;xxx g&quot;,&quot;origem&quot;:&quot;cidade1&quot;,&quot;id&quot;:27,&quot;destino&quot;:&quot;cidade2&quot;}]
 </div>   
 
   
@@ -1253,14 +1960,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.95">
-      <div class="step-ref failed">95</div>
+    <div class="step-container" id="0.98">
+      <div class="step-ref passed">98</div>
       
-      <div class="step-cell failed">
+      <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell failed">0</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1269,12 +1976,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.95">13:22:49.691 src/test/java/middleware/encomenda/encomenda.feature:95
-Then status 200
-status code was: 404, expected: 200, response time in milliseconds: 2, url: http://localhost:5001/encomenda/search/?id=14, response: 
-{&quot;code&quot;:&quot;ResourceNotFound&quot;,&quot;message&quot;:&quot;/encomenda/search/ does not exist&quot;}
-src/test/java/middleware/encomenda/encomenda.feature:95
-</div>   
+     
 
   
 
@@ -1286,14 +1988,14 @@ src/test/java/middleware/encomenda/encomenda.feature:95
   
 
   <div class="step-row">
-    <div class="step-container" id="0.96">
-      <div class="step-ref skipped">96</div>
+    <div class="step-container" id="0.99">
+      <div class="step-ref passed">99</div>
       
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>match response.id == encomendaID</span>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0] == primeiraEncomenda</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    

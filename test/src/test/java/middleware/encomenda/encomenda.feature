@@ -26,38 +26,39 @@ Scenario: Listas todas as encomendas
   Then status 200
   And match each $ contains { id : '#number', origem : '#string', destino : '#string', peso : '#string', data : '#string' }
 
-# Scenario: Atualizar uma encomenda através de seu ID [primeira encomenda da tabela]
+Scenario: Atualizar uma encomenda através de seu ID [primeira encomenda da tabela]
 
-#   Given path 'list'
-#   When method get
-#   Then status 200
-#   * def encomendaOriginal = response[0]
-#   * def encomendaModificada =
-#   """
-#   {
-#     "id": alunoOriginal.id),
-#     "origem": "cidade1_atualizado",
-#     "destino": "cidade2_atualizado",
-#     "peso": "xxx g atualizado",
-#     "data": "dd/mm/aaaa_atualizado"
-#   }
-#   """
+    Given path 'list'
+    When method get
+    Then status 200
+    * def encomendaOriginal = response[0]
 
-#   Given path 'update'
-#   And request encomendaModificada
-#   When method put
-#   Then status 200
-#   And match response.affectedRows == 1
+    * def encomendaModificado =
+    """
+    {   
+        "id": '#(encomendaOriginal.id)',
+        "origem": "cidade1_atualizado",
+        "destino": "cidade2_atualizado",
+        "peso": "xxx g_atualizado",
+        "data": "dd/mm/aaaa_atualizado"
+    }
+    """
 
-#   Given path 'listar'
-#   When method get
-#   Then status 200
-#   * def encomendaDepois = response[0]
-#   And match encomendaDepois.id == encomendaOriginal.id
-#   And match encomendaDepois.origem != encomendaModificada.origem
-#   And match encomendaDepois.destino != encomendaModificada.destino
-#   And match encomendaDepois.peso != encomendaModificada.peso
-#   And match encomendaDepois.data != encomendaModificada.data
+    Given path 'update'
+    And request encomendaModificado
+    When method put
+    Then status 200
+    And match response.affectedRows == 1
+
+    Given path 'list'
+    When method get
+    Then status 200
+    * def encomendaDepois = response[0]
+    And match encomendaDepois.id == encomendaOriginal.id
+    And match encomendaDepois.origem == encomendaModificado.origem
+    And match encomendaDepois.destino == encomendaModificado.destino
+    And match encomendaDepois.peso == encomendaModificado.peso
+    And match encomendaDepois.data == encomendaModificado.data
 
 Scenario: Eclusão de encomenda a partir de seu ID
 
@@ -88,9 +89,11 @@ Scenario: Procura de encomenda a partir de seu ID
     Given path 'list'
     When method get
     Then status 200
+    * def primeiraEncomenda = response[0]
     * def encomendaID = response[0].id
+    * def parameter = "?id=" + encomendaID
   
-    Given path 'search/?id=' + encomendaID
+    Given path 'search' + parameter
     When method get
     Then status 200
-    And match response.id == encomendaID
+    And match response[0] == primeiraEncomenda
